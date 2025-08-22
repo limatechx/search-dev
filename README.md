@@ -23,7 +23,9 @@ Caso o seu node seja o mais atual e o projeto apresentar avisos (warnings), ele 
 Depois de instalado o NVM do Windowns:
 
 nvm list - vai mostrar todas as versões
+
 nvm install (18.10.0) - versão escolhida
+
 nvm use 18.10.0 - usar a versão ja baixada anteriormente
 
 Agora verifique a versão do node e npm:
