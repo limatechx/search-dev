@@ -60,15 +60,15 @@
 </div>
 
           <div *ngIf="user.twitter_username">
-            Twitter: <a [href]="'https://twitter.com/' + user.twitter_username" target="_blank">
+            <mat-icon svgIcon="twitter-logo"></mat-icon> <a [href]="'https://twitter.com/' + user.twitter_username" target="_blank">
               @{{ user.twitter_username }}
             </a>
           </div>
-          
+
         </div>
         <button class="contato">Contato</button>
       </div>
-      
+
 
       <!-- Lado direito: repositórios -->
       <div class="perfil-repos">
@@ -77,7 +77,7 @@
           <p *ngIf="repo.description" class="repo-description">{{ repo.description }}</p>
           <span class="star-count">
   <mat-icon>star_outline</mat-icon>
-  {{ repo.stargazers_count }}
+  {{ repo.stargazers_count }} <span style = "color: gray; margin-left: 5px"> • Atualizado há 2 dias</span>
 </span>
 
         </div>

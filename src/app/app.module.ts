@@ -8,6 +8,8 @@ import { PerfilComponent } from './pages/perfil/perfil.component';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
+import { MatIconRegistry } from '@angular/material/icon';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @NgModule({
   declarations: [
@@ -26,4 +28,11 @@ import { MatIconModule } from '@angular/material/icon';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor(private matIconRegistry: MatIconRegistry, private domSanitizer: DomSanitizer) {
+    this.matIconRegistry.addSvgIcon(
+      'twitter-logo', // nome que você vai usar no HTML
+      this.domSanitizer.bypassSecurityTrustResourceUrl('assets/twitter-logo.svg') // caminho do SVG
+    );
+  }
+}
