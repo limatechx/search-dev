@@ -1,1 +1,21 @@
-<p>home works!</p>
+<div class="home">
+  <h1>
+    <span class="primeira">Search </span>
+    <span class="segunda">d_evs</span>
+  </h1>
+
+  <div class="buscar">
+    <div class="input-wrapper">
+      <mat-icon class="icon-search">search</mat-icon>
+      <input [(ngModel)]="username" (ngModelChange)="limparErro()" placeholder="Search">
+    </div>
+
+    <!-- botão desabilitado se input estiver vazio -->
+    <button (click)="buscar()" [disabled]="!username.trim()">Search</button>
+
+ <div *ngIf="errorMessage" style="color: red; margin-top: 10px;">
+  {{ errorMessage }}
+</div>
+    
+  </div>
+</div>

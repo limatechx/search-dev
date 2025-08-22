@@ -1,1 +1,87 @@
-<p>perfil works!</p>
+<div class="container">
+  <div class="top">
+    <h1>
+      <span class="primeira">Search </span>
+      <span class="segunda">d_evs</span>
+    </h1>
+
+    <div class="input-wrapper">
+      <mat-icon class="icon-search">search</mat-icon>
+      <input [(ngModel)]="username" placeholder="Search">
+      <button class="voltar" (click)="voltar()">Voltar</button>
+    </div>
+  </div>
+
+  <!-- Mensagem de erro -->
+  <div *ngIf="errorMessage" style="color: red; margin-top: 10px;">
+    {{ errorMessage }}
+  </div>
+
+  <!-- Bloco do perfil -->
+  <div *ngIf="user" class="perfil">
+    <div class="perfil-container">
+      <!-- Lado esquerdo: foto, nome, login, bio e links -->
+      <div class="perfil-info">
+        <div class="foto">
+          <img [src]="user.avatar_url" width="48">
+          <div class="nome">
+            <h2>{{ user.name }}</h2>
+            <p style="color: gray">@{{ user.login }}</p>
+          </div>
+        </div>
+        <p class="bio" *ngIf="user.bio">{{ user.bio }}</p>
+
+        <div class="links">
+          <div class="link-item">
+            <mat-icon>groups_outline</mat-icon>
+            <a [href]="'https://github.com/' + user.login + '?tab=followers'" target="_blank">
+
+              {{ user.followers }}
+            </a> seguidores
+          </div>
+
+          <div>
+            <mat-icon>favorite_border</mat-icon>
+            <a [href]="'https://github.com/' + user.login + '?tab=following'" target="_blank">
+              {{ user.following }}
+            </a> seguindo
+          </div>
+
+          <div *ngIf="user.location"> <mat-icon>location_on_outlined</mat-icon> {{ user.location }}</div>
+
+
+          <div *ngIf="user.email">
+            <mat-icon>mail_outline</mat-icon> <a [href]="'mailto:' + user.email">{{ user.email }}</a>
+          </div>
+
+          <div class="link-item" *ngIf="user.blog">
+  <mat-icon>link</mat-icon>
+  <a [href]="user.blog" target="_blank">{{ user.blog }}</a>
+</div>
+
+          <div *ngIf="user.twitter_username">
+            Twitter: <a [href]="'https://twitter.com/' + user.twitter_username" target="_blank">
+              @{{ user.twitter_username }}
+            </a>
+          </div>
+          
+        </div>
+        <button class="contato">Contato</button>
+      </div>
+      
+
+      <!-- Lado direito: repositórios -->
+      <div class="perfil-repos">
+        <div *ngFor="let repo of repos" class="repo-card">
+          <a [href]="repo.html_url" target="_blank" class="repo-title">{{ repo.name }}</a>
+          <p *ngIf="repo.description" class="repo-description">{{ repo.description }}</p>
+          <span class="star-count">
+  <mat-icon>star_outline</mat-icon>
+  {{ repo.stargazers_count }}
+</span>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
