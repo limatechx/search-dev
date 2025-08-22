@@ -1,27 +1,106 @@
-# SearchDev
+# Projeto Angular - d_evs
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.8.
+Aplicação Angular para busca de usuários e visualização de perfis do GitHub.
+Foi usado para a estilização, tanto Material UI, quanto o css clássico. Assim, foi mostrado domínio em ambos os métodos. Alguns componentes foram 
+feitos a mão, para ser o mais fiel possível ao layout disponibilizado.
 
-## Development server
+## 🔧 Pré-requisitos
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Antes de instalar o projeto, certifique-se de ter instalado em sua máquina:
 
-## Code scaffolding
+- **Angular** versão 16.2.8.
+- **Node.js** versão 18.x recomendada 
+- **Gerenciador de pacotes**: npm 8.x 
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Para verificar se estão instalados:
 
-## Build
+node -v
+npm -v
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Caso o seu node seja o mais atual e o projeto apresentar avisos (warnings), ele rodará normalmente. Mas se desejar, pode mudar sua versão do node instalando o nvm no Windows. https://github.com/coreybutler/nvm-windows/releases
 
-## Running unit tests
+Depois de instalado o NVM do Windowns:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+nvm list - vai mostrar todas as versões
+nvm install (18.10.0) - versão escolhida
+nvm use 18.10.0 - usar a versão ja baixada anteriormente
 
-## Running end-to-end tests
+Agora verifique a versão do node e npm:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+node -v
+npm -v
 
-## Further help
+## Instalação do projeto:
+Clone o repositório:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+git clone https://github.com/limatechx/search-dev.git
+
+Acesse a pasta do projeto:
+
+cd seu-projeto
+
+Instale as dependências:
+
+npm install
+ 
+Para rodar a aplicação localmente:
+
+ng serve
+
+A aplicação será executada em: http://localhost:4200/
+
+Qualquer alteração no código será atualizada automaticamente no navegador.
+
+Para gerar a build otimizada para produção:
+
+ng build --prod
+A build será gerada na pasta dist/
+
+Você pode hospedar os arquivos gerados em qualquer servidor web.
+
+## Estrutura do projeto
+
+src/
+│
+├── app/
+│   ├── pages/               # Páginas da aplicação
+│   │   ├── home/            # Componente Home
+│   │   └── perfil/          # Componente Perfil
+│   ├──github.service.ts     # API do Github
+│   ├── app-routing.module.ts # Rotas da aplicação
+│   └── app.module.ts        # Módulo principal do Angular
+│
+├── assets/                  # Arquivos estáticos (imagens, SVGs)
+├── environments/            # Configurações de ambiente (dev, prod)
+├── styles.scss              # Estilos globais
+└── index.html               # HTML principal
+
+Detalhes importantes:
+pages/: Contém os componentes que correspondem a cada página da aplicação (Home, Perfil).
+
+github.service.ts: Contém serviços Angular, responsáveis por chamadas HTTP e lógica de negócio.
+
+assets/: Imagens, ícones e arquivos estáticos usados no projeto. (Ex: Twitter-logo)
+
+app.module.ts: Onde todos os módulos, componentes e serviços são registrados.
+
+app-routing.module.ts: Define as rotas da aplicação.
+
+📌 Observações
+Use sempre a mesma versão do Node.js que está especificada na seção de pré-requisitos para evitar problemas com dependências.
+
+Para instalar novas bibliotecas, utilize npm install 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
