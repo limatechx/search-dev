@@ -1,4 +1,4 @@
-# Projeto Angular - d_evs
+# Projeto Angular - Search d_evs
 
 Aplicação Angular para busca de usuários e visualização de perfis do GitHub.
 Foi usado para a estilização, tanto Material UI, quanto o css clássico. Assim, foi mostrado domínio em ambos os métodos. Alguns componentes foram 
@@ -15,6 +15,7 @@ Antes de instalar o projeto, certifique-se de ter instalado em sua máquina:
 ## Para verificar se estão instalados:
 
 node -v
+
 npm -v
 
 Caso o seu node seja o mais atual e o projeto apresentar avisos (warnings), ele rodará normalmente. Mas se desejar, pode mudar sua versão do node instalando o nvm no Windows. https://github.com/coreybutler/nvm-windows/releases
