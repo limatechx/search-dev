@@ -29,54 +29,48 @@ nvm use 18.10.0 - usar a versão ja baixada anteriormente
 Agora verifique a versão do node e npm:
 
 node -v
+
 npm -v
 
 ## Instalação do projeto:
 Clone o repositório:
 
-git clone https://github.com/limatechx/search-dev.git
+Acesse o terminal na sua maquina com o CMD e digite: git clone https://github.com/limatechx/search-dev.git
+
 
 Acesse a pasta do projeto:
 
 cd seu-projeto
 
+
 Instale as dependências:
 
 npm install
+
  
 Para rodar a aplicação localmente:
 
 ng serve
 
+
 A aplicação será executada em: http://localhost:4200/
 
+
 Qualquer alteração no código será atualizada automaticamente no navegador.
+
 
 Para gerar a build otimizada para produção:
 
 ng build --prod
+
 A build será gerada na pasta dist/
+
 
 Você pode hospedar os arquivos gerados em qualquer servidor web.
 
 ## Estrutura do projeto
 
-src/
-│
-├── app/
-│   ├── pages/               # Páginas da aplicação
-│   │   ├── home/            # Componente Home
-│   │   └── perfil/          # Componente Perfil
-│   ├──github.service.ts     # API do Github
-│   ├── app-routing.module.ts # Rotas da aplicação
-│   └── app.module.ts        # Módulo principal do Angular
-│
-├── assets/                  # Arquivos estáticos (imagens, SVGs)
-├── environments/            # Configurações de ambiente (dev, prod)
-├── styles.scss              # Estilos globais
-└── index.html               # HTML principal
 
-Detalhes importantes:
 pages/: Contém os componentes que correspondem a cada página da aplicação (Home, Perfil).
 
 github.service.ts: Contém serviços Angular, responsáveis por chamadas HTTP e lógica de negócio.
