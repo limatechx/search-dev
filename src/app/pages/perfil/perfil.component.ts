@@ -3,7 +3,6 @@ import { ActivatedRoute } from '@angular/router';
 import { GithubService } from '../../github.service';
 import { Router } from '@angular/router';
 
-
 @Component({
   selector: 'app-perfil',
   templateUrl: './perfil.component.html',
@@ -18,7 +17,6 @@ export class PerfilComponent implements OnInit {
   constructor(private route: ActivatedRoute, private githubService: GithubService, private router: Router) { }
 
   ngOnInit(): void {
-    // Observa mudanças no parâmetro "username"
     this.route.paramMap.subscribe(params => {
       this.username = params.get('username') || '';
       this.buscarUsuario();
@@ -26,29 +24,29 @@ export class PerfilComponent implements OnInit {
   }
 
   buscarUsuario() {
-  this.errorMessage = ''; // <--- limpa a mensagem de erro antiga
+    this.errorMessage = ''; 
 
-  if (!this.username) return;
+    if (!this.username) return;
 
-  this.githubService.getUser(this.username).subscribe({
-    next: data => {
-      this.user = data;
-      this.errorMessage = ''; 
-    },
-    error: () => {
-      this.user = null;
-      this.repos = [];
-      this.errorMessage = 'Usuário não encontrado!'; // 
-    }
-  });
+    this.githubService.getUser(this.username).subscribe({
+      next: data => {
+        this.user = data;
+        this.errorMessage = '';
+      },
+      error: () => {
+        this.user = null;
+        this.repos = [];
+        this.errorMessage = 'Usuário não encontrado!'; //
+      }
+    });
 
-  this.githubService.getRepos(this.username).subscribe({
-    next: data => {
-      this.repos = data.sort((a: any, b: any) => b.stargazers_count - a.stargazers_count);
-    },
-    error: () => this.repos = []
-  });
-}
+    this.githubService.getRepos(this.username).subscribe({
+      next: data => {
+        this.repos = data.sort((a: any, b: any) => b.stargazers_count - a.stargazers_count);
+      },
+      error: () => this.repos = []
+    });
+  }
 
   voltar() {
     this.router.navigate(['/home']);

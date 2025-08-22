@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import {HttpClientModule} from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
@@ -31,8 +31,8 @@ import { DomSanitizer } from '@angular/platform-browser';
 export class AppModule {
   constructor(private matIconRegistry: MatIconRegistry, private domSanitizer: DomSanitizer) {
     this.matIconRegistry.addSvgIcon(
-      'twitter-logo', // nome que você vai usar no HTML
-      this.domSanitizer.bypassSecurityTrustResourceUrl('assets/twitter-logo.svg') // caminho do SVG
+      'twitter-logo',
+      this.domSanitizer.bypassSecurityTrustResourceUrl('assets/twitter-logo.svg')
     );
   }
 }

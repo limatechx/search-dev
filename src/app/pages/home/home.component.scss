@@ -55,14 +55,14 @@ input:hover{
 button {
   font-family: 'Inter', sans-serif;
   font-size: 18px;
-  font-weight: 400;  
+  font-weight: 400;
   color: #ffffff;
   background-color: #8C19D2;
   border: none;
   border-radius:10px;
   padding: 10px 20px;
   cursor: pointer;
-  width: 150px;  
+  width: 150px;
 }
 
 .input-wrapper {
@@ -71,14 +71,14 @@ button {
 }
 
 .input-wrapper input {
-  padding-left: 30px; /* espaço para o ícone à esquerda */
+  padding-left: 30px;
 }
 
 .input-wrapper .icon-search {
   position: absolute;
-  left: 5px; /* distância da borda do input */
+  left: 5px;
   top: 70%;
   transform: translateY(-50%);
   color: gray;
-  pointer-events: none; /* deixa digitar normalmente */
+  pointer-events: none; 
 }

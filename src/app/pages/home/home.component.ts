@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { GithubService } from '../../github.service'; // ajuste o caminho
+import { GithubService } from '../../github.service'; //
 
 @Component({
   selector: 'app-home',
