@@ -1,0 +1,254 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+
+}
+
+.container{
+  padding: 0 40px 30px 40px;
+}
+
+
+.top {
+  display: flex;
+  margin-bottom: 50px
+}
+
+h1 {
+  @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+  font-size: 32px;
+  font-weight: 500;
+  letter-spacing: 1%;
+  font-family: 'Nunito', sans-serif;
+  margin: 30px 40px 50px 35px;
+}
+
+.primeira {
+  color: #0069CA;
+}
+
+.segunda {
+  color: #8C19D2;
+}
+
+input {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+  color: #E2E8F0;
+  color: #000000;
+  width: 550px;
+  height: 40px;
+  border: 2.5px solid #8C19D2;
+  padding-left: 10px;
+  margin: 30px 30px 0 0
+}
+
+.input-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.input-wrapper input {
+  padding-left: 30px;
+  /* espaço para a lupa */
+}
+
+.input-wrapper .icon-search {
+  position: absolute;
+  left: 8px;
+  /* distância da borda do input */
+  top: 42%;
+  transform: translateY(-50%);
+  color: gray;
+  pointer-events: none;
+  /* deixa digitar normalmente */
+}
+
+
+button {
+  @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+}
+
+.voltar {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+  color: #ffffff;
+  background-color: #8C19D2;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  width: 120px;
+  margin-left: 10px;
+}
+
+.foto{
+  display:flex; 
+  background-color: #ffffff;
+  
+}
+
+.nome{
+  margin: 10px 0 0 10px;
+}
+
+.perfil{
+  margin-left: 35px
+}
+
+img{ 
+  border-radius: 50%;
+  width: 70px;
+}
+
+.bio {
+  margin: 10px 0 0 10px;
+}
+
+.links{
+  margin-left:10px; 
+
+}
+
+.perfil-container {
+  display: flex;
+  gap: 40px;
+}
+
+.perfil-info {
+  flex: 1;
+  
+  max-width: 400px;
+  
+}
+
+.perfil-repos {
+  flex: 1;
+  //max-width: 100%;
+}
+
+.foto {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.links div {
+  margin-top: 5px;
+}
+
+.input-wrapper {
+  position: relative;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.input-wrapper input {
+  padding-left: 30px;
+}
+
+.input-wrapper .icon-search {
+  position: absolute;
+  left: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: gray;
+  pointer-events: none;
+}
+
+.voltar {
+  margin-left: 10px;
+}
+
+.contato{
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+  color: #ffffff;
+  background-color: #8C19D2;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  width: 100%;
+  margin: 60px 0 0 10px;
+}
+
+/* Remove o estilo antigo de li, se tiver */
+.perfil-repos ul,
+.perfil-repos li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Cada repositório como card */
+.repo-card {
+  padding: 10px 0;               /* espaço vertical entre repositórios */
+  border-bottom: 1px solid #ddd; /* linha separadora */
+}
+
+.repo-card:last-child {
+  border-bottom: none;          
+}
+
+.repo-title {
+  font-weight: bold;
+  text-decoration: none;
+  color: #000;                
+}
+
+.repo-description {
+  margin: 5px 0;
+  color: gray;
+}
+
+.star-count {
+  position: relative;
+  padding-left: 24px; /* espaço para o ícone */
+  display: inline-block;
+  line-height: 1; /* deixa o número alinhado */
+}
+
+.star-count mat-icon {
+  position: absolute;
+  left: 0;
+  top: 55%;
+  transform: translateY(-50%);
+  font-size: 20px; /* tamanho da estrela */
+  
+}
+
+.link-item {
+  position: relative;    /* referência para o ícone */
+  padding-left: 28px;    /* espaço para o ícone */
+  display: inline-block; 
+  line-height: 1.5;      /* garante que o texto fique centralizado verticalmente */
+}
+
+.link-item mat-icon {
+  position: absolute;
+  left: 0;
+  top: 50%; 
+  transform: translateY(-50%); /* centraliza verticalmente com o link */
+  font-size: 20px;  
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
